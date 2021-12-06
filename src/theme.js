@@ -23,6 +23,9 @@ const rawTheme = createTheme({
       main: green[500],
       dark: green[700],
     },
+    text: {
+      primary: "#55534f",
+    },
   },
   typography: {
     fontFamily: "'Work Sans', sans-serif",
@@ -57,36 +60,36 @@ const theme = {
       ...rawTheme.typography.h1,
       ...fontHeader,
       letterSpacing: 0,
-      fontSize: 60,
+      fontSize: 48,
     },
     h2: {
       ...rawTheme.typography.h2,
       ...fontHeader,
-      fontSize: 48,
+      fontSize: 42,
     },
     h3: {
       ...rawTheme.typography.h3,
       ...fontHeader,
-      fontSize: 42,
+      fontSize: 36,
     },
     h4: {
       ...rawTheme.typography.h4,
       ...fontHeader,
-      fontSize: 36,
+      fontSize: 20,
     },
     h5: {
       ...rawTheme.typography.h5,
-      fontSize: 20,
+      fontSize: 18,
       fontWeight: rawTheme.typography.fontWeightLight,
     },
     h6: {
       ...rawTheme.typography.h6,
       ...fontHeader,
-      fontSize: 18,
+      fontSize: 16,
     },
     subtitle1: {
       ...rawTheme.typography.subtitle1,
-      fontSize: 18,
+      fontSize: 16,
     },
     body1: {
       ...rawTheme.typography.body2,
