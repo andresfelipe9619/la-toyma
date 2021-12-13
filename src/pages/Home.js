@@ -1,32 +1,58 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Header from "../components/header";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import CountUp from "react-countup";
-import Logo from "../assets/Logo Circulo.png";
+import { useCountUp } from "react-countup";
+import LogoSVG from "../assets/Logo.svg";
+import { makeStyles } from "@mui/styles";
+import CustomCarousel from "../components/carousel";
+import Contact from "./Contact";
 
-const time = 3;
+const TIME = 4;
+const useStyles = makeStyles({
+  title: {
+    fontSize: "6rem",
+  },
+});
 
 function Home() {
   const [show, setShow] = useState(false);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setShow(true);
-    }, time * 1600);
-  }, []);
-
-  if (!show) return <CountPage />;
+  if (!show) return <CountPage setShow={setShow} />;
 
   return (
     <>
       <Header />
-      <Typography variant="h2">TE AMO PELU!! ❤️</Typography>
+      <CustomCarousel />
+      <Typography variant="h2" align="center" gutterBottom>
+        TE AMO PELU!! ❤️
+      </Typography>
+      <Typography variant="h2" align="center" gutterBottom>
+        MENU
+      </Typography>
+      <CustomCarousel />
+      <Contact />
     </>
   );
 }
 
-function CountPage() {
+function CountPage({ setShow }) {
+  const countUpRef = React.useRef(null);
+  const classes = useStyles();
+
+  const { start } = useCountUp({
+    ref: countUpRef,
+    start: 2021,
+    end: 1997,
+    delay: TIME / 2,
+    duration: TIME,
+    onEnd: () => {
+      setTimeout(() => {
+        setShow(true);
+      }, (TIME * 1000) / 1.5);
+    },
+  });
+
   return (
     <Box
       width="100%"
@@ -46,10 +72,13 @@ function CountPage() {
           backgroundPosition: "center",
         }}
       /> */}
-      <img src={Logo} alt="logo la toyma" width="30%" />
-      <CountUp start={2021} end={1997} duration={time} delay={0}>
-        {({ countUpRef }) => <Typography variant="h1" ref={countUpRef} />}
-      </CountUp>
+      <img
+        src={LogoSVG}
+        alt="La toyma Logo"
+        width="30%"
+        onLoad={() => start()}
+      />
+      <Typography variant="h1" className={classes.title} ref={countUpRef} />
     </Box>
   );
 }

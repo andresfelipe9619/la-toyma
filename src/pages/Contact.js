@@ -3,7 +3,7 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
-import { makeStyles } from "@mui/material/styles";
+import { makeStyles } from "@mui/styles";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import { sendMessage } from "../api";
@@ -36,11 +36,8 @@ export default function Contact() {
   return (
     <Grid container className={classes.root} spacing={2}>
       <Grid container item md={5}>
-        <Typography>Contacto</Typography>
-        <Typography variant="h6" component="p" paragraph>
-          I am interested in freelance opportunities – especially ambitious or
-          large projects. However, if you have other request or question, don’t
-          hesitate to contact me using below form either.
+        <Typography variant="h2" gutterBottom>
+          Domicilio
         </Typography>
         <Formik
           onSubmit={handleFormSubmit}

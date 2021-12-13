@@ -5,28 +5,50 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import LogoTitulo from "../../assets/Logo Título Positivos.png";
+import LogoTitulo from "../../assets/Logo Título Negativos.png";
+import useScrollTrigger from "@mui/material/useScrollTrigger";
+import Slide from "@mui/material/Slide";
 
 export default function Header() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <img src={LogoTitulo} alt="La Toyma" height={60} width="auto" />
-          <Typography variant="h6" component="div" color="inherit">
-            Desde 1997
-          </Typography>
-        </Toolbar>
-      </AppBar>
+      <HideOnScroll>
+        <AppBar>
+          <Toolbar>
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              sx={{ mr: 2 }}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Box width="90%" display="flex" justifyContent={"center"}>
+              <img src={LogoTitulo} alt="La Toyma" height="auto" width={120} />
+            </Box>
+            <Typography variant="caption" component="i" color="inherit">
+              Desde 1997
+            </Typography>
+          </Toolbar>
+        </AppBar>
+      </HideOnScroll>
     </Box>
+  );
+}
+
+function HideOnScroll(props) {
+  const { children, window } = props;
+  // Note that you normally won't need to set the window ref as useScrollTrigger
+  // will default to window.
+  // This is only being set here because the demo is in an iframe.
+  const trigger = useScrollTrigger({
+    target: window ? window() : undefined,
+  });
+
+  return (
+    <Slide appear={false} direction="down" in={!trigger}>
+      {children}
+    </Slide>
   );
 }
