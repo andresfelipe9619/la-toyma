@@ -5,9 +5,9 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import LogoTitulo from "../../assets/Logo Título Negativos.png";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Slide from "@mui/material/Slide";
+import Titulo from "../../assets/Titulo";
 
 export default function Header() {
   return (
@@ -25,9 +25,9 @@ export default function Header() {
               <MenuIcon />
             </IconButton>
             <Box width="90%" display="flex" justifyContent={"center"}>
-              <img src={LogoTitulo} alt="La Toyma" height="auto" width={120} />
+              <Titulo />
             </Box>
-            <Typography variant="caption" component="i" color="inherit">
+            <Typography variant="body2" component="i" color="inherit">
               Desde 1997
             </Typography>
           </Toolbar>

@@ -1,4 +1,3 @@
-import "./App.css";
 import theme from "./theme";
 import { ThemeProvider } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
