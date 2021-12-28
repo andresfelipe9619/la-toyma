@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React, { lazy, useState } from "react";
 import Header from "../components/header";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
-import CustomCarousel from "../components/carousel";
 import Footer from "../components/footer/Footer";
-import Contact from "./Contact";
-import Menu from "./Menu";
-import SplashPage from "./Splash";
+
+const CustomCarousel = lazy(() => import(/* webpackChunkName: "splash" */ "../components/carousel"));
+const Contact = lazy(() => import(/* webpackChunkName: "splash" */ "./Contact"));
+const Menu = lazy(() => import(/* webpackChunkName: "splash" */ "./Menu"));
+const SplashPage = lazy(() => import(/* webpackChunkName: "splash" */ "./Splash"));
 
 function Home() {
   const [show, setShow] = useState(false);
