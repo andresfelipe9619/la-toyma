@@ -170,6 +170,8 @@ export default function Contact() {
                 color="primary"
                 size="large"
                 variant="contained"
+                name="quiero-tamal"
+                aria-label="Quiero mi Tamal!"
                 disabled={isSubmitting}
               >
                 Quiero mi Tamal!

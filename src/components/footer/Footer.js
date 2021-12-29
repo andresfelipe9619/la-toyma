@@ -18,6 +18,10 @@ const HOST = `https://www.${DOMAIN}.com`;
 const useStyles = makeStyles((theme) => ({
   title: {
     fontWeight: 900,
+    color: "#f1f3eb",
+  },
+  link: {
+    textDecoration: "none",
   },
   appBar: {
     margin: 0,
@@ -33,13 +37,13 @@ function Copyright() {
 
   return (
     <Box
-      bgcolor="secondary.dark"
+      bgcolor="secondary.light"
       className={classes.title}
       width="100%"
       textAlign="center"
       p={1}
     >
-      <Link color="inherit" href={HOST}>
+      <Link color="inherit" href={HOST} className={classes.link}>
         {DOMAIN}.com
       </Link>{" "}
       {" ® • "}
@@ -66,16 +70,16 @@ export default function AppFooter() {
           <Container>
             <Grid container spacing={5}>
               <Grid item container justifyContent="center">
-                <IconButton size="large">
+                <IconButton size="large" aria-label="la-toyma-facebook">
                   <FacebookIcon />
                 </IconButton>
-                <IconButton size="large">
+                <IconButton size="large" aria-label="la-toyma-instagram">
                   <InstagramIcon />
                 </IconButton>
-                <IconButton size="large">
+                <IconButton size="large" aria-label="la-toyma-youtube">
                   <YouTubeIcon />
                 </IconButton>
-                <IconButton size="large">
+                <IconButton size="large" aria-label="la-toyma-twitter">
                   <TwitterIcon />
                 </IconButton>
               </Grid>
