@@ -26,6 +26,16 @@
     "react-scripts": "4.0.3",
     "react-spinners-kit": "^1.9.1",
     "web-vitals": "^1.0.1",
+    "workbox-background-sync": "^6.4.2",
+    "workbox-broadcast-update": "^6.4.2",
+    "workbox-cacheable-response": "^6.4.2",
+    "workbox-core": "^6.4.2",
+    "workbox-expiration": "^6.4.2",
+    "workbox-google-analytics": "^6.4.2",
+    "workbox-precaching": "^6.4.2",
+    "workbox-routing": "^6.4.2",
+    "workbox-strategies": "^6.4.2",
+    "workbox-streams": "^6.4.2",
     "yup": "^0.32.11"
   },
   "scripts": {
