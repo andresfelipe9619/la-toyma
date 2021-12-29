@@ -40,7 +40,7 @@ export default function SplashPage({ setShow }) {
 
   const { start } = useCountUp({
     ref: countUpRef,
-    start: 2021,
+    start: 2022,
     end: 1997,
     delay: TIME / 2,
     duration: TIME,

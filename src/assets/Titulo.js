@@ -26,7 +26,7 @@ export default function Titulo() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="140"
-      height="auto"
+      height="70"
       style={{ margin: 4 }}
       viewBox="0 0 594.882 300.38"
     >
