@@ -3,11 +3,10 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Slide from "@mui/material/Slide";
 import Titulo from "../../assets/Titulo";
+import Logo from "../../assets/Logo.svg";
 
 export default function Header() {
   return (
@@ -15,15 +14,7 @@ export default function Header() {
       <HideOnScroll>
         <AppBar>
           <Toolbar>
-            <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              sx={{ mr: 2 }}
-            >
-              <MenuIcon />
-            </IconButton>
+          <img src={Logo} alt="La toyma logo"/>
             <Box width="90%" display="flex" justifyContent={"center"}>
               <Titulo />
             </Box>

@@ -71,8 +71,8 @@ export default function Contact() {
             <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
+                aria-controls="panel-direccion-content"
+                id="panel-direccion-header"
               >
                 <Typography>Direccion</Typography>
               </AccordionSummary>
@@ -127,8 +127,8 @@ export default function Contact() {
             <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
+                aria-controls="panel-pago-content"
+                id="panel-pago-header"
               >
                 <Typography>Pago</Typography>
               </AccordionSummary>
@@ -138,8 +138,8 @@ export default function Contact() {
             <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
+                aria-controls="panel-cantidad-content"
+                id="panel-cantidad-header"
               >
                 <Typography>Cantidad</Typography>
               </AccordionSummary>
@@ -149,8 +149,8 @@ export default function Contact() {
             <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
+                aria-controls="panel-sabor-content"
+                id="panel-sabor-header"
               >
                 <Typography>Sabor</Typography>
               </AccordionSummary>

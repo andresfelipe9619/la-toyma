@@ -1,13 +1,13 @@
 import Carousel from "react-material-ui-carousel";
 import { Card, CardMedia, Grid, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import B001 from "../../assets/banner/001.jpg";
-import B002 from "../../assets/banner/002.jpg";
-import B003 from "../../assets/banner/003.jpg";
-import B004 from "../../assets/banner/004.jpg";
-import B005 from "../../assets/banner/005.jpg";
-import B006 from "../../assets/banner/006.jpg";
-import B007 from "../../assets/banner/007.jpg";
+import B001 from "../../assets/banner/001.webp";
+import B002 from "../../assets/banner/002.webp";
+import B003 from "../../assets/banner/003.webp";
+import B004 from "../../assets/banner/004.webp";
+import B005 from "../../assets/banner/005.webp";
+import B006 from "../../assets/banner/006.webp";
+import B007 from "../../assets/banner/007.webp";
 
 const useStyles = makeStyles({
   Banner: {

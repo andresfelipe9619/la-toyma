@@ -3,7 +3,7 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Divider from "@mui/material/Divider";
 import { Item } from "../components/carousel";
-import B005 from "../assets/banner/005.jpg";
+import B005 from "../assets/banner/005.webp";
 
 export default function Menu() {
   return (

@@ -34,6 +34,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint './src/**/*.{js,jsx}'",
+    "webp": "for file in images/*; do cwebp -q 50 \"$file\" -o \"${file%.*}.webp\"; done",
     "lint:fix": "eslint './src/**/*.{js,jsx}' --fix"
   },
   "eslintConfig": {
