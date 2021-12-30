@@ -4,12 +4,20 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
-import Footer from "../components/footer/Footer";
 
-const CustomCarousel = lazy(() => import(/* webpackChunkName: "splash" */ "../components/carousel"));
-const Contact = lazy(() => import(/* webpackChunkName: "splash" */ "./Contact"));
-const Menu = lazy(() => import(/* webpackChunkName: "splash" */ "./Menu"));
-const SplashPage = lazy(() => import(/* webpackChunkName: "splash" */ "./Splash"));
+const Footer = lazy(() =>
+  import(/* webpackChunkName: "carousel" */ "../components/footer/Footer")
+);
+const CustomCarousel = lazy(() =>
+  import(/* webpackChunkName: "carousel" */ "../components/carousel")
+);
+const Contact = lazy(() =>
+  import(/* webpackChunkName: "contact" */ "./Contact")
+);
+const Menu = lazy(() => import(/* webpackChunkName: "menu" */ "./Menu"));
+const SplashPage = lazy(() =>
+  import(/* webpackChunkName: "splash" */ "./Splash")
+);
 
 function Home() {
   const [show, setShow] = useState(false);
@@ -47,7 +55,7 @@ function Home() {
           </Typography>
         </Grid>
         <Menu />
-        <Grid item md={10} xs={12}>
+        <Grid item container md={8} xs={10} spacing={2}>
           <Contact />
         </Grid>
       </Grid>
